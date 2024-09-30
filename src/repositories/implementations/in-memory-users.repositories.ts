@@ -1,9 +1,9 @@
-import { container, inject, injectable } from "tsyringe";
+import { inject, singleton } from "tsyringe";
 import { IUsersRepository } from "../types/users.repository";
 import { User } from "../../entities/user";
 import { IDatabase } from "../../db/types/idatabase";
 
-@injectable()
+@singleton()
 export class InMemoryUsersRepository implements IUsersRepository{
   constructor(
     @inject("Database") 

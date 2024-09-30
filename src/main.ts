@@ -8,7 +8,6 @@ import { User } from "./entities/user";
 function main(){
   const usersRepository = container.resolve<IUsersRepository>("UsersRepository")
 
-
   // Create new user instance
   const newUser = new User({
     name: "John",
